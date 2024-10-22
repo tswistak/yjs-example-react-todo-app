@@ -1,12 +1,16 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import styles from './app.module.scss';
-
-import NxWelcome from './nx-welcome';
+import { Todo } from './todo';
 
 export function App() {
   return (
-    <div>
-      <NxWelcome title="yjs-demo" />
+    <div className="wrapper">
+      <div className="container">
+        <div id="welcome">
+          <h1>
+            <span>OUR SUPERB</span> TODO APP 🦫
+          </h1>
+        </div>
+        <Todo />
+      </div>
     </div>
   );
 }
