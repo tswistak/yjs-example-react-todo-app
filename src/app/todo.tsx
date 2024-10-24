@@ -1,6 +1,7 @@
 import Markdown from 'react-markdown';
 import { useTodo } from './use-todo';
 import { DragDropContext, Draggable, Droppable } from 'react-beautiful-dnd';
+import stc from 'string-to-color';
 
 export const Todo = () => {
   const {
@@ -12,6 +13,7 @@ export const Todo = () => {
     updateDescription,
     updateTitle,
     handleDragEnd,
+    editedBy,
   } = useTodo();
 
   return (
@@ -50,9 +52,12 @@ export const Todo = () => {
                             backgroundColor:
                               currentEditedItem === item.id
                                 ? 'rgba(0, 122, 204, 1)'
+                                : item.id in editedBy
+                                ? stc(editedBy[item.id])
                                 : undefined,
                             color:
-                              currentEditedItem == item.id
+                              currentEditedItem === item.id ||
+                              item.id in editedBy
                                 ? 'rgba(255, 255, 255, 1)'
                                 : undefined,
                             flexDirection: 'column',

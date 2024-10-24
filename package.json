@@ -7,7 +7,8 @@
     "build": "nx build",
     "test": "nx test",
     "lint": "nx lint",
-    "format": "nx format:write"
+    "format": "nx format:write",
+    "ws-server": "PORT=1234 YPERSISTENCE=./dbDir node ./node_modules/y-websocket/bin/server.cjs"
   },
   "private": true,
   "dependencies": {
@@ -15,7 +16,10 @@
     "react": "18.3.1",
     "react-beautiful-dnd": "^13.1.1",
     "react-dom": "18.3.1",
-    "react-markdown": "^9.0.1"
+    "react-markdown": "^9.0.1",
+    "string-to-color": "^2.2.2",
+    "y-websocket": "^2.0.4",
+    "yjs": "^13.6.20"
   },
   "devDependencies": {
     "@eslint/js": "^9.8.0",
