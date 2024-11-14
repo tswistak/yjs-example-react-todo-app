@@ -109,8 +109,10 @@ export const useTodo = () => {
     ];
     const [removed] = newOrder.splice(result.source.index, 1);
     newOrder.splice(result.destination!.index, 0, removed);
-    newOrder.forEach(([key], index) => {
-      orderMap.set(key, index);
+    doc.transact(() => {
+      newOrder.forEach(([key], index) => {
+        orderMap.set(key, index);
+      });
     });
   }, []);
 
