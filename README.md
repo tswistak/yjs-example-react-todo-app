@@ -2,6 +2,8 @@
 
 An example of how Yjs can be integrated into a simple React app — in this case, a todo list app.
 
+Recommended reading: https://www.synergycodes.com/blog/real-time-collaboration-for-multiple-users-in-react-flow-projects-with-yjs-e-book
+
 ## Contents
 
 The `main` branch contains a todo list app powered by Yjs for multi-user collaboration. If you want to see the app in a version utilizing local state instead of a synchronized one, check out the `initial-app` branch.
